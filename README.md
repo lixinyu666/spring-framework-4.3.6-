@@ -13,7 +13,7 @@ Spring被设计成非侵入性的，这意味着你的逻辑代码通常情况�
 
 如果您刚开始使用Spring，您也许应该通过创建Spring Boot应用程序开始使用Spring框架。Spring Boot提供了一个快速（和武断的）的方法来创建用于生产环境的基于Spring的应用。它是基于Spring框架的，支持约定大于配置，被设计为可以快速启动并且尽可能快的运行起来。
 
-你可以使用[start.spring.io](http://start.spring.io/)生成一个基本的项目或遵循“[Getting Started](https://spring.io/guides)”来[指导构建一个RESTful 风格的Web服务](https://spring.io/guides/gs/rest-service/)。这些指导不仅容易理解，而且对Spring Boot的介绍十分精准，而且大部分都是基于Spring Boot的。他们还涵盖了其他Spring机构项目，可能解决你在考虑的一个特定问题。
+你可以使用[start.spring.io](http://start.spring.io/)生成一个基本的项目或遵循“[Getting Started](https://spring.io/guides)”指南中的一个，例如[指导构建一个RESTful 风格的Web服务](https://spring.io/guides/gs/rest-service/)指南。除了容易理解吸收之外，这些指南主要是基于任务的，它们中的大多数是基于Spring Boot的。它们也包含了Spring的其它工程，当解决一个特定问题时你可能会考虑它们。
 <br/>
 
 ## 2. Spring框架介绍
