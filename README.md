@@ -26,3 +26,4 @@ Spring使你能创建“普通java对象构建应用程序”(POJOs)并能非侵
 * 使一个本地的Java方法可以远程调用而不必处理远程APIs 
 * 使一个本地Java方法变为管理操作而不必处理JMX APIs 
 * 使一个本地Java方法变为消息处理器而不必处理JMS APIs
+<br/>
