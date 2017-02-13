@@ -19,3 +19,4 @@ Spring框架是一个为开发java应用的综合基础建设提供支持的java
 <br/>
 Spring可以使你从“普通java对象构建应用程序”（POJOs）的使用到运用企业服务的非侵入性的POJOs。此功能完全适用于Java SE项目模型，部分适用于java EE。
 <br/>
+作为应用程序开发人员，您可以从Spring平台获益的例子：
