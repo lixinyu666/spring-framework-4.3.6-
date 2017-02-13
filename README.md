@@ -15,6 +15,6 @@ Spring被设计成非侵入性的，这意味着你的逻辑代码通常对框�
 
 ## 2. Spring框架介绍
 <br/>
-Spring框架是一个java平台开发java应用的综合基础设施提供支持。Spring处理基础设施，以便您可以专注于应用程序。
+Spring框架是一个为开发java应用的综合基础建设提供支持的java平台。Spring处理基础建设，以便您可以专注于应用程序。
 <br/>
-弹簧可以使你从“普通java对象构建应用程序”（POJOs）和申请企业服务的非侵入性的POJOs。此功能适用于java编程模型，完全和部分java EE。
+Spring可以使你从“普通java对象构建应用程序”（POJOs）的使用到运用企业服务的非侵入性的POJOs。此功能完全适用于Java SE项目模型，部分适用于java EE。
