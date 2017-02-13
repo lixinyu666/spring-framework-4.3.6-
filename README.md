@@ -17,7 +17,8 @@ Spring被设计成非侵入性的，这意味着你的逻辑代码通常对框�
 <br/>
 Spring框架是一个为开发java应用的综合基础架构提供支持的java平台。Spring处理基础架构，以便您可以专注于应用程序。
 <br/>
-Spring可以使你从“普通java对象构建应用程序”（POJOs）的使用到运用企业服务的非侵入性的POJOs。此功能完全适用于Java SE项目模型，部分适用于java EE。
+Spring使你能创建“普通java对象构建应用程序”(POJOs)并能非侵入式的将企业服务应用到普通Java对象(POJOs)上。
+此功能完全适用于Java SE项目模型，部分适用于java EE。
 <br/>
 作为应用程序开发人员，您可以从Spring平台获益的例子：
 
