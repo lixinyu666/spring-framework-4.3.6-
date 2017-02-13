@@ -9,7 +9,9 @@ Spring被设计成非侵入性的，这意味着你的逻辑代码通常情况�
 
 ## 1. 开始使用Spring
 <br/>
-本参考指南提供有关Spring框架的详细信息。它提供了所有功能的全面文档，以及Spring提供的基本概念（如“依赖注入”）的一些背景。如果您刚开始使用Spring，您也许应该通过创建Spring Boot应用程序开始使用Spring框架。Spring Boot提供了一个快速（固定）的方法来创建一个准备生产的基于Spring的应用。它是基于Spring框架，该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置，并旨在让你和运行尽可能快。
+本参考指南提供有关Spring框架的详细信息。它提供了所有功能的全面文档，以及Spring提供的基本概念（如“依赖注入”）的一些背景。
+
+如果您刚开始使用Spring，您也许应该通过创建Spring Boot应用程序开始使用Spring框架。Spring Boot提供了一个快速（固定）的方法来创建一个准备生产的基于Spring的应用。它是基于Spring框架，该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置，并旨在让你和运行尽可能快。
 
 你可以使用[start.spring.io](http://start.spring.io/)生成一个基本的项目或遵循“[Getting Started](https://spring.io/guides)”来[指导构建一个RESTful 风格的Web服务](https://spring.io/guides/gs/rest-service/)。这些指导不仅容易理解，而且对Spring Boot的介绍十分精准，而且大部分都是基于Spring Boot的。他们还涵盖了其他Spring机构项目，可能解决你在考虑的一个特定问题。
 <br/>
