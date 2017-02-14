@@ -85,3 +85,6 @@ Spring 4框架中包含了`spring-messaging`模块，它对Spring集成项目例
 
 ###2.2.4 数据访问/集成
 
+数据访问/集成层包括JDBC,ORM,OXM,JMS和业务模块。
+
+`spring-jdbc`模块提供了JDBC抽象层，不需要再编写单调的JDBC代码，解析数据库提供商指定的错误编码。
