@@ -67,4 +67,4 @@ Spring框架包含的功能大约由20个模块组成。这些模块按组可分
 
 上下文(`spring-context`)模块建立在由[Core模块和Beans模块](README.md#2.2.1-核心容器)提供的坚实基础上：它是在类似于JNDI注册表式的框架风格模式中访问对象的一种方法。上下文模块继承了Beans模块的功能，并添加了对国际化（例如使用资源捆绑）、事件传播、资源加载和上下文透明创建（例如通过Servlet容器）的支持。上下文模块也支持Java EE功能例如EJB，JMX和基本的远程。`ApplicationContext`接口是上下文模块的焦点。`spring-context-support`支持将缓存(EhCache, Guava, JCache), 邮件(JavaMail),调度(CommonJ, Quartz)和模板引擎(FreeMarker, JasperReports, Velocity)等第三方库集成进Spring应用程序上下文中。
 
-`spring-expression`模块提供了强大的表达式语言用来在运行时查询和操作对象图。它是JSP 2.1规范中统一表达式语言(unified EL)的扩展。这个语言支持setting和getting属性值，属性分配，方法调用，访问数组、集合和索引器的内容，逻辑和算术操作，变量命名，从Spring Ioc容器中通过名字检索对象。它也支持它还支持列表投影、选择以及常见的列表聚合。
+`spring-expression`模块提供了强大的[表达式语言](README.md#2.2.1-核心容器)用来在运行时查询和操作对象图。它是JSP 2.1规范中统一表达式语言(unified EL)的扩展。这个语言支持setting和getting属性值，属性分配，方法调用，访问数组、集合和索引器的内容，逻辑和算术操作，变量命名，从Spring Ioc容器中通过名字检索对象。它也支持它还支持列表投影、选择以及常见的列表聚合。
