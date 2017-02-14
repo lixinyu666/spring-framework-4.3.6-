@@ -87,4 +87,6 @@ Spring 4框架中包含了`spring-messaging`模块，它对Spring集成项目例
 
 数据访问/集成层包括JDBC,ORM,OXM,JMS和业务模块。
 
-`spring-jdbc`模块提供了JDBC抽象层，不需要再编写单调的JDBC代码，解析数据库提供商指定的错误编码。
+`spring-jdbc`模块提供了[JDBC](#README.md#2.2.1-核心容器)抽象层，不需要再编写单调的JDBC代码，解析数据库提供商指定的错误编码。
+
+`spring-tx`模块为实现指定接口和所有的普通Java对象(POJOs)的类提供[编程式(programmatic)和声明式(declarative)的业务管理](#README.md#2.2.1-核心容器)。
