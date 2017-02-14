@@ -60,3 +60,5 @@ Spring框架包含的功能大约由20个模块组成。这些模块按组可分
 <br/>
 
 ###2.2.1 核心容器
+<br/>
+核心容器功能包括spring-core, spring-beans, spring-context, spring-context-support, and spring-expression(Spring表现语言)模块。
