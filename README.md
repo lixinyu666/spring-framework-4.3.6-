@@ -77,3 +77,7 @@ Spring框架包含的功能大约由20个模块组成。这些模块按组可分
 独立的`spring-aspects`模块提供了与AspectJ的集成。
 
 `spring-instrument`模块提供了类设备支持和类加载器的实现，它们可以在某些应用服务器中使用。`spring-instrument-tomcat`模块包含了Tomcat的Spring设备代理。
+<br/>
+###2.2.3 信息
+
+Spring 4框架中包含了spring-messaging模块，它对Spring集成项目例如Message, MessageChannel, MessageHandler和其它作为消息应用服务基础的项目进行了重要的抽象。这个模块也包含了一系列将消息映射到方法上的注解，这个注解与基于编程模型Spring MVC注解类似。
