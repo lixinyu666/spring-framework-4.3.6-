@@ -65,4 +65,4 @@ Spring框架包含的功能大约由20个模块组成。这些模块按组可分
 
 `spring-core`和`spring-beans`模块[提供了框架的基础结构部分](README.md#2.2.1-核心容器)，包含控制反转(IoC)和依赖注入(DI)功能。BeanFactory是工厂模式的高级实现。它去掉了程序单例模式的需求并且允许你从实际的程序逻辑中解耦配置和依赖关系。
 
-上下文(spring-context)模块建立在由Core模块和Beans模块提供的坚实基础上：它是在类似于JNDI注册表式的框架风格模式中访问对象的一种方法。上下文模块继承了Beans模块的功能，并添加了对国际化（例如使用资源捆绑）、事件传播、资源加载和上下文透明创建（例如通过Servlet容器）的支持。上下文模块也支持Java EE功能例如EJB，JMX和基本的远程。ApplicationContext接口是上下文模块的焦点。spring-context-support支持将第三方库集成进Spring应用程序上下文中，
+上下文(`spring-context`)模块建立在由Core模块和Beans模块提供的坚实基础上：它是在类似于JNDI注册表式的框架风格模式中访问对象的一种方法。上下文模块继承了Beans模块的功能，并添加了对国际化（例如使用资源捆绑）、事件传播、资源加载和上下文透明创建（例如通过Servlet容器）的支持。上下文模块也支持Java EE功能例如EJB，JMX和基本的远程。`ApplicationContext`接口是上下文模块的焦点。`spring-context-support`支持将第三方库集成进Spring应用程序上下文中，
