@@ -49,8 +49,7 @@ Spring框架中的控制反转(IoC)组件通过提供一种形式化方法解决
 <br/>
 Spring框架包含的功能大约由20个模块组成。这些模块按组可分为核心容器、数据访问/集成，Web，AOP(面向切面编程)、设备、消息和测试，如下图所示。
 
-图2.1。Spring框架概述
+Spring框架概述
 
 ![图2.1](/assets/spring-overview.png)
 
-<center>图2.1</center>
