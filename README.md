@@ -56,6 +56,6 @@ Spring框架包含的功能大约由20个模块组成。这些模块按组可分
 
 ![Spring框架概述](/assets/spring-overview.png)
 
-接下来的章节列出了每个功能可用的模块、它们的工件名字以及它们包含的主题。工件名字与<a class="link" href="#dependency-management" title="1.&nbsp;开始使用spring">依赖管理工具</a>中使用的artifact IDs有关。
+接下来的章节列出了每个功能可用的模块、它们的工件名字以及它们包含的主题。工件名字与<a class="link" href="#1.-开始使用spring" title="1.&nbsp;开始使用spring">依赖管理工具</a>中使用的artifact IDs有关。
 
 
