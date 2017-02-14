@@ -81,3 +81,7 @@ Spring框架包含的功能大约由20个模块组成。这些模块按组可分
 ###2.2.3 信息
 
 Spring 4框架中包含了`spring-messaging`模块，它对Spring集成项目例如`Message`, `MessageChannel`, `MessageHandler`和其它作为消息应用服务基础的项目进行了重要的抽象。这个模块也包含了一系列将消息映射到方法上的注解，这个注解与基于编程模型Spring MVC注解类似。
+<br/>
+
+###2.2.4 数据访问/集成
+
