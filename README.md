@@ -73,3 +73,7 @@ Spring框架包含的功能大约由20个模块组成。这些模块按组可分
 ###2.2.2 AOP和仪器
 
 `spring-aop`模块提供了[AOP](README.md#2.2.1-核心容器) Alliance-compliant(AOP联盟)面向切面编程的实现，例如允许你自定义方法拦截器和切入点来清晰的解耦功能实现上应该分开的代码。使用源码级的元数据功能，你也可以将行为信息合并到你的代码中，在某种程度上这类似于.NET的属性值。
+
+独立的`spring-aspects`模块提供了与AspectJ的集成。
+
+`spring-instrument`模块提供了类设备支持和类加载器的实现，它们可以在某些应用服务器中使用。`spring-instrument-tomcat`模块包含了Tomcat的Spring设备代理。
