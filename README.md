@@ -60,7 +60,7 @@ Spring框架包含的功能大约由20个模块组成。这些模块按组可分
 <br/>
 
 ###2.2.1 核心容器
-<br/>
+
 [核心容器](README.md#2.2.1-核心容器)功能包括`spring-core`, `spring-beans`, `spring-context`, `spring-context-support`, 和 `spring-expression(Spring表现语言)`模块。
 
 `spring-core`和`spring-beans`模块[提供了框架的基础结构部分](README.md#2.2.1-核心容器)，包含控制反转(IoC)和依赖注入(DI)功能。BeanFactory是工厂模式的高级实现。它去掉了程序单例模式的需求并且允许你从实际的程序逻辑中解耦配置和依赖关系。
@@ -71,5 +71,5 @@ Spring框架包含的功能大约由20个模块组成。这些模块按组可分
 <br/>
 
 ###2.2.2 AOP和仪器
-<br/>
+
 `spring-aop`模块提供了[AOP](README.md#2.2.1-核心容器) Alliance-compliant(AOP联盟)面向切面编程的实现，例如允许你自定义方法拦截器和切入点来清晰的解耦功能实现上应该分开的代码。使用源码级的元数据功能，你也可以将行为信息合并到你的代码中，在某种程度上这类似于.NET的属性值。
