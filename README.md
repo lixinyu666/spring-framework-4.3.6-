@@ -51,3 +51,6 @@ Spring框架包含的功能大约由20个模块组成。这些模块按组可分
 
 图2.1。Spring框架概述
 
+![图2.1](/assets/spring-overview.png)
+
+<center>图2.1</center>
