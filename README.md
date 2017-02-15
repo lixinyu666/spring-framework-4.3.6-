@@ -120,3 +120,4 @@ Spring 4框架中包含了`spring-messaging`模块，它对Spring集成项目例
 <br/>
 **典型的、成熟的Spring web应用**
 
+![典型的、成熟的Spring web应用](/assets/overview-full.png)
