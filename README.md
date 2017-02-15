@@ -91,4 +91,4 @@ Spring 4框架中包含了`spring-messaging`模块，它对Spring集成项目例
 
 `spring-tx`模块为实现指定接口和所有的普通Java对象(POJOs)的类提供[编程式(programmatic)和声明式(declarative)的业务管理](#README.md#2.2.1-核心容器)。
 
-`spring-orm`模块提供流行的[对象关系映射](#README.md#2.2.1-核心容器)APIs的集成层，包括[JPA](#README.md#2.2.1-核心容器), [JDO](#README.md#2.2.1-核心容器)和(Hibernate)[#README.md#2.2.1-核心容器]。在使用spring-orm模块时，你可以将Spring的其它功能与这些O/R-mapping框架结合起来使用，例如前面提到的简单声明式业务管理的功能。
+`spring-orm`模块提供流行的[对象关系映射](#README.md#2.2.1-核心容器)APIs的集成层，包括[JPA](#README.md#2.2.1-核心容器), [JDO](#README.md#2.2.1-核心容器)和[Hibernate](#README.md#2.2.1-核心容器)。在使用spring-orm模块时，你可以将Spring的其它功能与这些O/R-mapping框架结合起来使用，例如前面提到的简单声明式业务管理的功能。
