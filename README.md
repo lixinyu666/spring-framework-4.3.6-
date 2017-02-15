@@ -94,3 +94,5 @@ Spring 4框架中包含了`spring-messaging`模块，它对Spring集成项目例
 `spring-orm`模块提供流行的[对象关系映射](#README.md#2.2.1-核心容器)APIs的集成层，包括[JPA](#README.md#2.2.1-核心容器), [JDO](#README.md#2.2.1-核心容器)和[Hibernate](#README.md#2.2.1-核心容器)。在使用`spring-orm`模块时，你可以将Spring的其它功能与这些O/R-mapping框架结合起来使用，例如前面提到的简单声明式业务管理的功能。
 
 `spring-oxm`模块提供对[Object/XML映射](#README.md#2.2.1-核心容器)实现例如JAXB，Castor，XMLBeans, JiBx和XStream的抽象层。
+
+`spring-jms`模块（Java消息服务）包含产生和处理消息的功能。从Spring 4.1框架开始它提供了与`spring-messaging`的集成。
