@@ -122,3 +122,4 @@ Spring 4框架中包含了`spring-messaging`模块，它对Spring集成项目例
 
 ![典型的、成熟的Spring web应用](/assets/overview-full.png)
 
+Spring的声明式业务管理功能使web应用全面的业务化，如果你用过EJB容器管理业务的话你会发现它们基本一样。你所有自定义的业务逻辑都可以用POJOs实现并通过Spring的IoC容器管理。附加业务包括支持邮件发送和验证，这个是独立于web层之外的，你可以自由选择验证规则执行的位置。Spring对ORM的支持与JPA和Hibernate进行了集成；例如，当你使用Hibernate时，你可以继续使用你现有的映射文件和标准的Hibernate SessionFactory配置。表单控制器被无缝的将web层和领域模型进行了集成，对于你的领域模型来讲不再需要ActionForms或其它的将HTTP参数转换成值的
