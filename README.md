@@ -101,3 +101,5 @@ Spring 4框架中包含了`spring-messaging`模块，它对Spring集成项目例
 ###2.2.5 Web
 
 网络层包含`spring-web`, `spring-webmvc`, `spring-websocket`和`spring-webmvc-portlet`模块。
+
+`spring-web`模块提供基本的面向网络集成功能，例如multipart文件上传功能，使用Servlet监听器来初始化Ioc容器和面向网络的应用程序上下文。它也包含了HTTP客户端和Spring远程支持中网络相关的部分。
