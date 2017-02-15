@@ -113,3 +113,5 @@ Spring 4框架中包含了`spring-messaging`模块，它对Spring集成项目例
 
 `spring-test`模块支持[单元测试](#README.md#2.2.1-核心容器)，Spring组件和JUnit或TestNG的[集成测试](#README.md#2.2.1-核心容器)。它提供了Spring的`ApplicationContext`s [加载](#README.md#2.2.1-核心容器)和这些上下文[缓存](#README.md#2.2.1-核心容器)的一致。它也提供了可以单独测试代码的[模拟对象](#README.md#2.2.1-核心容器)。
 <br/>
+
+##2.3 
