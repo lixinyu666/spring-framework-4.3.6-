@@ -111,4 +111,4 @@ Spring 4框架中包含了`spring-messaging`模块，它对Spring集成项目例
 
 ###2.2.6 Test
 
-spring-test模块支持单元测试，Spring组件和JUnit或TestNG的集成测试。它提供了Spring的ApplicationContexts加载和这些上下文缓存的一致。它也提供了可以单独测试代码的模拟对象。
+·spring-test·模块支持单元测试，Spring组件和JUnit或TestNG的集成测试。它提供了Spring的ApplicationContexts加载和这些上下文缓存的一致。它也提供了可以单独测试代码的模拟对象。
