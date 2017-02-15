@@ -100,3 +100,4 @@ Spring 4框架中包含了`spring-messaging`模块，它对Spring集成项目例
 
 ###2.2.5 Web
 
+网络层包含`spring-web`, `spring-webmvc`, `spring-websocket`和`spring-webmvc-portlet`模块。
