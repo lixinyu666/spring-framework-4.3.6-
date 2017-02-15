@@ -96,3 +96,7 @@ Spring 4框架中包含了`spring-messaging`模块，它对Spring集成项目例
 `spring-oxm`模块提供对[Object/XML映射](#README.md#2.2.1-核心容器)实现例如JAXB，Castor，XMLBeans, JiBx和XStream的抽象层。
 
 `spring-jms`模块（[Java消息服务](#README.md#2.2.1-核心容器)）包含产生和处理消息的功能。从Spring 4.1框架开始它提供了与`spring-messaging`的集成。
+<br/>
+
+###2.2.5 Web
+
