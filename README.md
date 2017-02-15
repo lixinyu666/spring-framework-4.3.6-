@@ -106,4 +106,4 @@ Spring 4框架中包含了`spring-messaging`模块，它对Spring集成项目例
 
 `spring-webmvc`模块（也被称为Web-Servlet模块）包含了Spring的model-view-controller([MVC](#README.md#2.2.1-核心容器))和REST Web Services的网络应用实现。Spring的MVC框架提供了对领域模型代码，web表单，Spring框架其他功能的完全分离。
 
-`spring-webmvc-portlet`组件（也被称为Web-Portlet模块）提供MVC的实现，被用于Portlet 环境和镜子的春天webmvc模块的功能。
+`spring-webmvc-portlet`组件（也被称为Web-Portlet模块）提供MVC的实现，被用于Portlet环境和`spring-webmvc`功能的镜像。
