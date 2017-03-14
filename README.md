@@ -161,4 +161,5 @@ Spring 框架也提供了 Enterprise JavaBeans [访问和抽象层](#README.md#2
 
 下面是 Spring 中的组件列表。更多描述，详见[2.2. 模块](#README.md#2.2.1-核心容器)。
 
-Table 2.1. Spring Framework Artifacts
+**Table 2.1. Spring Framework Artifacts**
+
