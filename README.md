@@ -150,4 +150,9 @@ Spring 框架也提供了 Enterprise JavaBeans [访问和抽象层](#README.md#2
 
 依赖管理和依赖注入是不同的概念。为了让 Spring 的这些不错的功能运用到运用程序中（比如依赖注入），你需要收集所有的需要的库（JAR文件），并且在编译、运行的时候将它们放到你的类路径中。这些依赖不是虚拟组件的注入，而是物理的资源在文件系统中（通常）。依赖管理过程包括定位这些资源，存储它们并添加它们到类路径。依赖可以是直接（如我的应用程序运行时依赖于 Spring ），或者是间接（如我的应用程序依赖 `commons-dbcp` ，而 `commons-dbcp` 又依赖于 `commons-pool`）。间接的依赖也被称为 “transitive （传递）”，它是最难识别和管理的依赖。
 
-如果你将使用 Spring，你需要复制哪些包含你需要的 Spring 功能的 jar包。为了使这个过程更加简单，Spring 被打包为一组模块，这些模块尽可能多的分开依赖关系。例如，如果不想写一个 web 应用程序，你就不需要引入 Spring-web 模块。为了在本指南中标记 Spring 库模块我们使用了速记命名约定 `spring-*` 或者 `spring-*.jar` ，其中`*`代表模块的短名（比如 `spring-core`,`spring-webmvc`, `spring-jms` 等）。实际的jar 文件的名字，通常是用模块名字和版本号级联（如spring-core-4.1.4.BUILD-SNAPSHOT.jar）
+如果你将使用 Spring，你需要复制哪些包含你需要的 Spring 功能的 jar包。为了使这个过程更加简单，Spring 被打包为一组模块，这些模块尽可能多的分开依赖关系。例如，如果不想写一个 web 应用程序，你就不需要引入 Spring-web 模块。为了在本指南中标记 Spring 库模块我们使用了速记命名约定 `spring-*` 或者 `spring-*.jar` ，其中`*`代表模块的短名（比如 `spring-core`,`spring-webmvc`, `spring-jms` 等）。实际的jar 文件的名字，通常是用模块名字和版本号级联（如spring-core-4.1.4.BUILD-SNAPSHOT.jar）。
+
+每个 Spring Framework 发行版本将会放到下面的位置：
+
+*    Maven Central （Maven 中央库），这是 Maven 查询的默认库，而不需要任何特殊的配置就能使用。许多常用的 Spring 的依赖库也存在与Maven Central ，并且 Spring 社区的很大一部分都使用 Maven 进行依赖管理，所以这是最方便他们的。jar 命名格式是 `spring-*-<version>.jar` ， Maven groupId 是`org.springframework`。
+*    公共 Maven 仓库还拥有 Spring 专有的库。除了最终的 GA 版本，这个库还保存开发的快照和里程碑。JAR 文件的名字是和 Maven Central 相同的形式，所以这是让 Spring 的开发版本使用其它部署在 Maven Central 库的一个有用的地方。该库还包含一个用于发布的 zip 文件包含所有Spring jar，方便下载。
