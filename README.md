@@ -118,8 +118,18 @@ Spring 4框架中包含了`spring-messaging`模块，它对Spring集成项目例
 <br/>
 前面描述的搭积木方式使Spring在许多场景中都有一个合理选择，从运行在资源受限的嵌入式应用到全面成熟的企业级应用都在使用Spring的业务管理功能和网络框架集成。
 <br/>
-**典型的、成熟的Spring web应用**
+**下面图是典型的、成熟的Spring web应用**
 
 ![典型的、成熟的Spring web应用](/assets/overview-full.png)
 
 Spring的[声明式业务管理功能](#README.md#2.2.1-核心容器)使web应用全面的业务化，如果你用过EJB容器管理业务的话你会发现它们基本一样。你所有自定义的业务逻辑都可以用POJOs实现并通过Spring的IoC容器管理。附加业务包括支持邮件发送和验证，这个是独立于web层之外的，你可以自由选择验证规则执行的位置。Spring对ORM的支持与JPA和Hibernate进行了集成；例如，当你使用Hibernate时，你可以继续使用你现有的映射文件和标准的Hibernate `SessionFactory`配置。表单控制器被无缝的将web层和领域模型进行了集成，对于你的领域模型来讲不再需要`ActionForms`或其它的将HTTP参数转换成值的。
+
+**下面图是使用第三方Web框架的Spring中间层**
+
+![使用第三方Web框架的Spring中间层](/assets/overview-thirdparty-web.png)
+
+有时，不允许你完全切换到一个不同的框架。Spring 框架不强制使用它,它不是一个全有或全无的解决方案。现有的前端 Struts, Tapestry, JSF 或其他 UI 框架，可以集成一个基于 Spring 中间件，它允许你使用 Spring 事务的功能。你只需要将业务逻辑连接使用 `ApplicationContext` 和使用`WebApplicationContext`集成到你的 web 层。
+
+
+**远程使用场景**
+
