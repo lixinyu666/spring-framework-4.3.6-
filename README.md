@@ -160,3 +160,5 @@ Spring 框架也提供了 Enterprise JavaBeans [访问和抽象层](#README.md#2
 所以首先，你要决定用什么方式管理你的依赖，通常建议你使用自动系统像 Maven, Gradle 或 Ivy, 当你也可以下载 jar。
 
 下面是 Spring 中的组件列表。更多描述，详见[2.2. 模块](#README.md#2.2.1-核心容器)。
+
+Table 2.1. Spring Framework Artifacts
