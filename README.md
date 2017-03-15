@@ -227,3 +227,35 @@ Spring 框架也提供了 Enterprise JavaBeans [访问和抽象层](#README.md#2
 **Maven的“物料清单”的依赖**
 
 在使用Maven时，可能会意外混合不同版本的Spring JAR。例如，你可能会发现第三方库或另一个Spring项目将传递依赖项拉入旧版本。 如果你忘记自己显式声明一个直接依赖，可能会出现各种意想不到的问题。
+
+为了克服这种问题，Maven支持“物料清单”（BOM）依赖的概念。你可以在`dependencyManagement`部分中导入`spring-framework-bom`，以确保所有spring依赖项（直接和可传递）具有相同的版本。
+
+```
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-framework-bom</artifactId>
+            <version>4.3.7.RELEASE</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+```
+
+使用BOM后，当依赖 Spring Framework组件后，无需再指定`<version>`属性。
+
+```
+<dependencies>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+    </dependency>
+<dependencies>
+```
+
