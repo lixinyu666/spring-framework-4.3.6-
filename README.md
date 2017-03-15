@@ -175,7 +175,6 @@ Spring 框架也提供了 Enterprise JavaBeans [访问和抽象层](#README.md#2
 
 如果你使用Maven进行依赖关系管理，你甚至不需要显式提供日志记录依赖关系。 例如，要创建应用程序上下文并使用依赖注入来配置应用程序，你的Maven依赖关系将如下所示：
 
-
 ```
 <dependencies>
     <dependency>
@@ -187,3 +186,42 @@ Spring 框架也提供了 Enterprise JavaBeans [访问和抽象层](#README.md#2
 </dependencies>
 ```
 
+就是这样。注意，如果不需要针对Spring API进行编译，范围(scope)可以声明为运行时(runtime)，这通常是基本依赖注入使用用例。
+
+上面的示例使用Maven Central存储库。 要使用Spring Maven存储库（例如，用于里程碑或开发人员快照），你需要在Maven配置中指定存储库位置。完整版本：
+
+```
+<repositories>
+    <repository>
+        <id>io.spring.repo.maven.release</id>
+        <url>http://repo.spring.io/release/</url>
+        <snapshots><enabled>false</enabled></snapshots>
+    </repository>
+</repositories>
+```
+
+里程碑：
+
+```
+<repositories>
+    <repository>
+        <id>io.spring.repo.maven.milestone</id>
+        <url>http://repo.spring.io/milestone/</url>
+        <snapshots><enabled>false</enabled></snapshots>
+    </repository>
+</repositories>
+```
+
+以及快照：
+
+```
+<repositories>
+    <repository>
+        <id>io.spring.repo.maven.snapshot</id>
+        <url>http://repo.spring.io/snapshot/</url>
+        <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+</repositories>
+```
+
+**Maven的“物料清单”的依赖**
