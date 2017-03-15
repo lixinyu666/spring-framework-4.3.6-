@@ -172,3 +172,18 @@ Spring 框架也提供了 Enterprise JavaBeans [访问和抽象层](#README.md#2
 接下来，我们概述配置依赖于Spring的应用程序所需的基本步骤，首先使用Maven，然后使用Gradle，最后使用Ivy。 在所有情况下，如果有什么不清楚，请参考依赖管理系统的文档，或者查看一些示例代码 - Spring本身使用Gradle在构建时管理依赖关系，我们的示例主要使用Gradle或Maven。
 
 **Maven 依赖管理**
+
+如果你使用Maven进行依赖关系管理，你甚至不需要显式提供日志记录依赖关系。 例如，要创建应用程序上下文并使用依赖注入来配置应用程序，你的Maven依赖关系将如下所示：
+
+
+```
+<dependencies>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>4.3.7.RELEASE</version>
+        <scope>runtime</scope>
+    </dependency>
+</dependencies>
+```
+
