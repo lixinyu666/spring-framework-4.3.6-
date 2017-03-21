@@ -334,7 +334,27 @@ Spring中的强制性日志依赖性是Jakarta Commons Logging API（JCL）。�
 
 基本上有两种方法关闭`commons-logging`：
 
-1.从spring-core模块中排除依赖性（因为它是唯一显式依赖commons-logging的模块）
-2.依赖于一个特殊的commons-logging依赖，用一个空jar替换库（更多细节可以在 SLF4J FAQ中找到）
+1.从`spring-core`模块中排除依赖性（因为它是唯一显式依赖`commons-logging`的模块）
+2.依赖于一个特殊的`commons-logging`依赖，用一个空jar替换库（更多细节可以在 [SLF4J FAQ](https://www.slf4j.org/faq.html#excludingJCL)中找到）
 
-要排除commons-logging，请将以下内容添加到你的dependencyManagement部分：
+要排除commons-logging，请将以下内容添加到你的`dependencyManagement`部分：
+
+```
+<dependencies>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>4.3.7.RELEASE</version>
+        <exclusions>
+            <exclusion>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+</dependencies>
+```
+
+现在这个应用程序运行不了，因为没有在类路径上实现JCL API，所以要解决它需要提供一个新的。在下一节中，我们将向你展示如何使用SLF4J提供JCL的替代实现。
+
+**使用 SLF4J**
