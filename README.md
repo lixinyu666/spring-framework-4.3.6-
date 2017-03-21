@@ -324,4 +324,6 @@ testCompile("org.springframework:spring-test:5.0.0.M3")
 
 应用程序开发人员的目标之一通常是在整个应用程序的中心位置配置统一日志记录，包括所有外部组件。这就更加困难，因为它可能已经有太多选择的日志框架。
 
-Spring中的强制性日志依赖性是Jakarta Commons Logging API（JCL）。我们编译JCL，我们也使JCL Log对象对于扩展Spring框架的类可见。对于用户来说，所有版本的Spring都使用相同的日志库很重要：迁移很容易，因为即使使用扩展Spring的应用程序也保持向后兼容性。我们这样做的方式是使Spring中的一个模块显式地依赖commons-logging（JCL的规范实现），然后使所有其他模块在编译时依赖它。如果你使用Maven为例，并想知道你在哪里选择对commons-logging的依赖，那么它是从Spring，特别是从中央模块称为spring-core(关于此处，理解就好，翻译的不到位)。
+Spring中的强制性日志依赖性是Jakarta Commons Logging API（JCL）。我们编译JCL，我们也使JCL `Log`对象对于扩展Spring框架的类可见。对于用户来说，所有版本的Spring都使用相同的日志库很重要：迁移很容易，因为即使使用扩展Spring的应用程序也保持向后兼容性。我们这样做的方式是使Spring中的一个模块显式地依赖`commons-logging`（JCL的规范实现），然后使所有其他模块在编译时依赖它。如果你使用Maven为例，并想知道你在哪里选择对`commons-logging`的依赖，那么它是从Spring，特别是从中央模块称为`spring-core`。
+
+关于`commons-logging`的好处是，你不需要任何其他东西来就能让你的应用程序工作。它有一个运行时发现算法，该算法在众所周知的classpath路径下寻找其他日志框架，并使用它认为是合适的（或者你可以告诉它，如果你需要）。如果没有其他可用的，你可以从JDK（java.util.logging或简称JUL）获得漂亮的查看日志。你应该会发现，你的Spring应用程序在大多数情况下可以很好地工作和记录到控制台，这很重要。
