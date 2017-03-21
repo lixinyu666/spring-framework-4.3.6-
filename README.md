@@ -409,6 +409,6 @@ SLF4J用户中更常见的选择是使用较少的步骤和生成较少的依赖
 
 ![Log4Jj](/assets/note.png) | Log4j 1.x is EOL and Log4j 2.3 is the last Java 6 compatible release
 
-许多人使用Log4j作为日志框架用于配置和管理目的。 它是高效的和成熟的，事实上，这是我们在运行时使用时，我们构建和测试Spring。 Spring还提供了一些用于配置和初始化Log4j的实用程序，所以它在一些模块中对Log4j有一个可选的编译时依赖。
+许多人使用[Log4j](http://logging.apache.org/log4j/)作为日志框架用于配置和管理目的。它是高效的和成熟的，事实上，这是我们在运行时使用时，我们构建和测试Spring。Spring还提供了一些用于配置和初始化Log4j的实用程序，所以它在一些模块中对Log4j有一个可选的编译时依赖。
 
-要使Log4j使用默认的JCL依赖（commons-logging），所有你需要做的是将Log4j放在类路径上，并为它提供一个配置文件（在类路径的根目录下的log4j.properties或log4j.xml）。 所以对于Maven用户，这是你的依赖性声明：
+要使Log4j使用默认的JCL依赖（`commons-logging`），所有你需要做的是将Log4j放在类路径上，并为它提供一个配置文件（在类路径的根目录下的`log4j.properties`或`log4j.xml`）。所以对于Maven用户，这是你的依赖性声明：
