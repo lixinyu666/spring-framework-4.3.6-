@@ -1,6 +1,3 @@
-[](http://ant.apache.org/ivy/)
-
-
 #Part I. Spring框架概述
 <br/>
 Spring框架是一个轻量级和一个一站式的解决方案，以构建您的企业就应用程序。然而，Spring是模块化的，允许您只使用那些您需要的部分，而不必使用其余的部分。你可以在任何web框架上使用IoC容器，也可以只使用Hibernate集成代码或JDBC抽象层。Spring框架支持声明式事务管理，通过RMI或Web服务的远程访问你的应用程序的逻辑，并且支持多种持久化数据的方式。它提供了一个功能齐全的MVC框架，并且能够透明地集成AOP到您的软件实现。
@@ -283,7 +280,7 @@ testCompile("org.springframework:spring-test:5.0.0.M3")
 
 **Ivy 依赖管理**
 
-如果你喜欢使用Ivy来管理依赖，那么有类似的配置选项。
+如果你喜欢使用[Ivy](http://ant.apache.org/ivy/)来管理依赖，那么有类似的配置选项。
 
 要配置Ivy指向Spring存储库，请将以下解析器添加到你的`ivysettings.xml`：
 
