@@ -259,3 +259,6 @@ Spring 框架也提供了 Enterprise JavaBeans [访问和抽象层](#README.md#2
 <dependencies>
 ```
 
+**Gradle依赖管理**
+
+要将Spring存储库与Gradle构建系统一起使用，请在repositories部分中包含相应的URL：
