@@ -428,3 +428,16 @@ SLF4J用户中更常见的选择是使用较少的步骤和生成较少的依赖
 </dependencies>
 ```
 
+下面是一个简单的log4j.properties 的实例，用于将日志打印到控制台：
+
+```
+log4j.rootCategory=INFO, stdout
+
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{ABSOLUTE} %5p %t %c{2}:%L - %m%n
+
+log4j.category.org.springframework.beans.factory=DEBUG
+```
+
+使用log4j2用默认的JCL依赖，所有你需要做的就是把log4j的classpath和提供一个配置文件（log4j2.xml，log4j2.properties，或其他支持的配置格式）。对于Maven用户所需的最小依赖：
