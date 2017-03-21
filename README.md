@@ -146,7 +146,7 @@ Spring 框架也提供了 Enterprise JavaBeans [访问和抽象层](#README.md#2
 <br/>
 
 
-###2.2.1 依赖管理和命名约定
+###2.3.1 依赖管理和命名约定
 
 依赖管理和依赖注入是不同的概念。为了让 Spring 的这些不错的功能运用到运用程序中（比如依赖注入），你需要收集所有的需要的库（JAR文件），并且在编译、运行的时候将它们放到你的类路径中。这些依赖不是虚拟组件的注入，而是物理的资源在文件系统中（通常）。依赖管理过程包括定位这些资源，存储它们并添加它们到类路径。依赖可以是直接（如我的应用程序运行时依赖于 Spring ），或者是间接（如我的应用程序依赖 `commons-dbcp` ，而 `commons-dbcp` 又依赖于 `commons-pool`）。间接的依赖也被称为 “transitive （传递）”，它是最难识别和管理的依赖。
 
@@ -311,4 +311,4 @@ testCompile("org.springframework:spring-test:5.0.0.M3")
 
 分发zip是发布到Spring Maven仓库（这只是为了我们的方便，你不需要Maven或任何其他构建系统为了下载它们）。
 
-要下载分发zip，请打开Web浏览器到[http://repo.spring.io/release/org/springframework/spring](http://repo.spring.io/release/org/springframework/spring)，然后为所需的版本选择适当的子文件夹。 分发文件结尾是 -dist.zip，例如spring-framework- {spring-version} -RELEASE-dist.zip。 还分发了`里程碑`和`快照`的分发。
+要下载分发zip，请打开Web浏览器到[http://repo.spring.io/release/org/springframework/spring](http://repo.spring.io/release/org/springframework/spring)，然后为所需的版本选择适当的子文件夹。 分发文件结尾是 -dist.zip，例如spring-framework- {spring-version} -RELEASE-dist.zip。 还分发了[里程碑](http://repo.spring.io/milestone/org/springframework/spring/)和[快照](http://repo.spring.io/snapshot/org/springframework/spring/)的分发。
