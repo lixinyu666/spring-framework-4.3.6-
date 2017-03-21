@@ -406,3 +406,5 @@ SLF4J提供对许多常见日志框架（包括JCL）的绑定，并且它也做
 SLF4J用户中更常见的选择是使用较少的步骤和生成较少的依赖关系，它是直接绑定到[Logback](https://logback.qos.ch/)。这消除了额外的绑定步骤，因为Logback直接实现SLF4J，所以你只需要依赖于两个不是四个库（`jcl-over-slf4j`和`logback`）。 如果你这样做，你可能还需要从其他外部依赖（不是Spring）中排除slf4j-api依赖，因为你只需要在类路径上有一个版本的API。
 
 **使用Log4J**
+
+![Log4Jj](/assets/note.png) | 
