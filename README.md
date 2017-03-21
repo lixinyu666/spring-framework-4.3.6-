@@ -327,3 +327,14 @@ testCompile("org.springframework:spring-test:5.0.0.M3")
 Spring中的强制性日志依赖性是Jakarta Commons Logging API（JCL）。我们编译JCL，我们也使JCL `Log`对象对于扩展Spring框架的类可见。对于用户来说，所有版本的Spring都使用相同的日志库很重要：迁移很容易，因为即使使用扩展Spring的应用程序也保持向后兼容性。我们这样做的方式是使Spring中的一个模块显式地依赖`commons-logging`（JCL的规范实现），然后使所有其他模块在编译时依赖它。如果你使用Maven为例，并想知道你在哪里选择对`commons-logging`的依赖，那么它是从Spring，特别是从中央模块称为`spring-core`。
 
 关于`commons-logging`的好处是，你不需要任何其他东西来就能让你的应用程序工作。它有一个运行时发现算法，该算法在众所周知的classpath路径下寻找其他日志框架，并使用它认为是合适的（或者你可以告诉它，如果你需要）。如果没有其他可用的，你可以从JDK（java.util.logging或简称JUL）获得漂亮的查看日志。你应该会发现，你的Spring应用程序在大多数情况下可以很好地工作和记录到控制台，这很重要。
+
+**不使用 Commons Logging**
+
+不幸的是，`commons-logging`中的运行时发现算法虽然对于终端用户方便，但是是有问题的。如果我们可以时光倒流并启动Spring作为一个新项目，它将使用不同的日志依赖关系。 第一个选择可能是用于Java的简单日志外观（[SLF4J](https://www.slf4j.org/)），它也被许多其他工具用于Spring在其应用程序中使用。
+
+基本上有两种方法关闭`commons-logging`：
+
+1.从spring-core模块中排除依赖性（因为它是唯一显式依赖commons-logging的模块）
+2.依赖于一个特殊的commons-logging依赖，用一个空jar替换库（更多细节可以在 SLF4J FAQ中找到）
+
+要排除commons-logging，请将以下内容添加到你的dependencyManagement部分：
