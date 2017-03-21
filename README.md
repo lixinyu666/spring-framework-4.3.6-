@@ -411,7 +411,7 @@ SLF4J用户中更常见的选择是使用较少的步骤和生成较少的依赖
 
 许多人使用[Log4j](http://logging.apache.org/log4j/)作为日志框架用于配置和管理目的。它是高效的和成熟的，事实上，这是我们在运行时使用时，我们构建和测试Spring。Spring还提供了一些用于配置和初始化Log4j的实用程序，所以它在一些模块中对Log4j有一个可选的编译时依赖。
 
-要使Log4j使用默认的JCL依赖（`commons-logging`），所有你需要做的是将Log4j放在类路径上，并为它提供一个配置文件（在类路径的根目录下的`log4j.properties`或`log4j.xml`）。所以对于Maven用户，这是你的依赖性声明：
+要使Log4j 1 使用默认的JCL依赖（`commons-logging`），所有你需要做的是将Log4j放在类路径上，并为它提供一个配置文件（在类路径的根目录下的`log4j.properties`或`log4j.xml`）。所以对于Maven用户，这是你的依赖性声明：
 
 ```
 <dependencies>
@@ -440,4 +440,4 @@ log4j.appender.stdout.layout.ConversionPattern=%d{ABSOLUTE} %5p %t %c{2}:%L - %m
 log4j.category.org.springframework.beans.factory=DEBUG
 ```
 
-使用log4j2用默认的JCL依赖，所有你需要做的就是把log4j的classpath和提供一个配置文件（log4j2.xml，log4j2.properties，或其他支持的配置格式）。对于Maven用户所需的最小依赖：
+使用log4j2用默认的JCL依赖，你需要做的就是把log4j的classpath和提供一个配置文件（log4j2.xml，log4j2.properties，或其他支持的配置格式）。对于Maven用户所需的最小依赖：
