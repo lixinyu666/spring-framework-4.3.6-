@@ -262,3 +262,5 @@ Spring 框架也提供了 Enterprise JavaBeans [访问和抽象层](#README.md#2
 **Gradle依赖管理**
 
 要将Spring存储库与Gradle构建系统一起使用，请在`repositories`部分中包含相应的URL：
+
+你可以根据需要将 repositories 中URL从`/release`更改为`/milestone`或`/snapshot`。 一旦配置了`repositories`，就可以按照通常的Gradle方式声明依赖关系：
