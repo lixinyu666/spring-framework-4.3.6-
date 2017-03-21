@@ -305,3 +305,4 @@ testCompile("org.springframework:spring-test:5.0.0.M3")
     name="spring-core" rev="4.3.7.RELEASE" conf="compile->runtime"/>
 ```
 
+**分布的ZIP文件**
