@@ -359,4 +359,44 @@ Spring中的强制性日志依赖性是Jakarta Commons Logging API（JCL）。�
 
 **使用 SLF4J**
 
-SLF4J是一个更简洁的依赖，在运行时比commons-logging更高效，因为它使用编译时绑定，而不是其集成的其他日志框架的运行时发现。这也意味着你必须更明确地了解你想在运行时发生什么，并声明它或相应地配置它。 SLF4J提供了对许多常见日志框架的绑定，因此你通常可以选择一个已经使用的绑定，并绑定到配置和管理。
+SLF4J是一个更简洁的依赖，在运行时比`commons-logging`更高效，因为它使用编译时绑定，而不是其集成的其他日志框架的运行时发现。这也意味着你必须更明确地了解你想在运行时发生什么，并声明它或相应地配置它。 SLF4J提供了对许多常见日志框架的绑定，因此你通常可以选择一个已经使用的绑定，并绑定到配置和管理。
+
+SLF4J提供对许多常见日志框架（包括JCL）的绑定，并且它也做了反向工作：充当其他日志框架与其自身之间的桥梁。因此，要在Spring中使用SLF4J，需要使用SLF4J-JCL桥替换`commons-logging`依赖关系。一旦你这样做，那么来自Spring内部的日志调用将被转换为对SLF4J API的日志调用，因此如果应用程序中的其他库使用该API，那么你有一个地方可以配置和管理日志记录。
+
+常见的选择可能是将Spring桥接到SLF4J，然后提供从SLF4J到Log4J的显式绑定。你需要提供4个依赖（并排除现有的`commons-logging`）：桥梁，SLF4J API，绑定到Log4J和Log4J实现本身。在Maven，你会这样做。
+
+```
+<dependencies>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>4.3.7.RELEASE</version>
+        <exclusions>
+            <exclusion>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>jcl-over-slf4j</artifactId>
+        <version>1.5.8</version>
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.5.8</version>
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <version>1.5.8</version>
+    </dependency>
+    <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.14</version>
+    </dependency>
+</dependencies>
+```
