@@ -440,4 +440,4 @@ log4j.appender.stdout.layout.ConversionPattern=%d{ABSOLUTE} %5p %t %c{2}:%L - %m
 log4j.category.org.springframework.beans.factory=DEBUG
 ```
 
-使用log4j2用默认的JCL依赖，你需要做的就是把log4j的classpath和提供一个配置文件（log4j2.xml，log4j2.properties，或其他支持的配置格式）。对于Maven用户所需的最小依赖：
+使用log4j 2用默认的JCL依赖，所有你需要做的是将Log4j放在类路径上，并为它提供一个配置文件（`log4j2.xml`，`log4j2.properties`，或[其他支持的配置格式](http://logging.apache.org/log4j/2.x/manual/configuration.html)）。对于Maven用户,所需的最小依赖为：
