@@ -1,4 +1,4 @@
-
+[](http://ant.apache.org/ivy/)
 
 
 #Part I. Spring框架概述
@@ -285,4 +285,4 @@ testCompile("org.springframework:spring-test:5.0.0.M3")
 
 如果你喜欢使用Ivy来管理依赖，那么有类似的配置选项。
 
-要配置Ivy指向Spring存储库，请将以下解析器添加到你的ivysettings.xml：
+要配置Ivy指向Spring存储库，请将以下解析器添加到你的`ivysettings.xml`：
