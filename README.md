@@ -296,3 +296,5 @@ testCompile("org.springframework:spring-test:5.0.0.M3")
 ```
 
 你可以根据需要将`root` URL从`/release/`更改为`/milestone/`或`/snapshot/`。
+
+配置后，你可以按照通常的方式添加依赖关系。 例如（在`ivy.xml`中）：
