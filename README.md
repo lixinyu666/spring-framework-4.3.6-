@@ -173,7 +173,7 @@ Spring 框架也提供了 Enterprise JavaBeans [访问和抽象层](#README.md#2
 
 **Maven 依赖管理**
 
-如果你使用Maven进行依赖关系管理，你甚至不需要显式提供日志记录依赖关系。 例如，要创建应用程序上下文并使用依赖注入来配置应用程序，你的Maven依赖关系将如下所示：
+如果你使用[Maven](http://maven.apache.org/)进行依赖关系管理，你甚至不需要显式提供日志记录依赖关系。 例如，要创建应用程序上下文并使用依赖注入来配置应用程序，你的Maven依赖关系将如下所示：
 
 ```
 <dependencies>
@@ -261,7 +261,7 @@ Spring 框架也提供了 Enterprise JavaBeans [访问和抽象层](#README.md#2
 
 **Gradle依赖管理**
 
-要将Spring存储库与Gradle构建系统一起使用，请在`repositories`部分中包含相应的URL：
+要将Spring存储库与[Gradle](https://gradle.org/)构建系统一起使用，请在`repositories`部分中包含相应的URL：
 
 
 ```
@@ -280,3 +280,9 @@ compile("org.springframework:spring-context:5.0.0.M3")
 testCompile("org.springframework:spring-test:5.0.0.M3")
 }
 ```
+
+**Ivy 依赖管理**
+
+如果你喜欢使用Ivy来管理依赖，那么有类似的配置选项。
+
+要配置Ivy指向Spring存储库，请将以下解析器添加到你的ivysettings.xml：
