@@ -305,4 +305,10 @@ testCompile("org.springframework:spring-test:5.0.0.M3")
     name="spring-core" rev="4.3.7.RELEASE" conf="compile->runtime"/>
 ```
 
-**分布的ZIP文件**
+**分发的ZIP文件**
+
+尽管使用支持依赖性管理的构建系统是获取Spring Framework的推荐方式，但仍然可以下载分发zip文件。
+
+分发zip是发布到Spring Maven仓库（这只是为了我们的方便，你不需要Maven或任何其他构建系统为了下载它们）。
+
+要下载分发zip，请打开Web浏览器到[http://repo.spring.io/release/org/springframework/spring](http://repo.spring.io/release/org/springframework/spring)，然后为所需的版本选择适当的子文件夹。 分发文件结尾是 -dist.zip，例如spring-framework- {spring-version} -RELEASE-dist.zip。 还分发了里程碑和快照的分发。
