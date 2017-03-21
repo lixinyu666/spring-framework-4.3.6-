@@ -286,3 +286,13 @@ testCompile("org.springframework:spring-test:5.0.0.M3")
 如果你喜欢使用Ivy来管理依赖，那么有类似的配置选项。
 
 要配置Ivy指向Spring存储库，请将以下解析器添加到你的`ivysettings.xml`：
+
+```
+<resolvers>
+    <ibiblio name="io.spring.repo.maven.release"
+            m2compatible="true"
+            root="http://repo.spring.io/release/"/>
+</resolvers>
+```
+
+你可以根据需要将`root` URL从`/release/`更改为`/milestone/`或`/snapshot/`。
