@@ -441,3 +441,57 @@ log4j.category.org.springframework.beans.factory=DEBUG
 ```
 
 使用log4j 2用默认的JCL依赖，所有你需要做的是将Log4j放在类路径上，并为它提供一个配置文件（`log4j2.xml`，`log4j2.properties`，或[其他支持的配置格式](http://logging.apache.org/log4j/2.x/manual/configuration.html)）。对于Maven用户,所需的最小依赖为：
+
+```
+<dependencies>
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+        <version>2.7</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-jcl</artifactId>
+        <version>2.7</version>
+    </dependency>
+</dependencies>
+```
+
+如果你使用的默认依赖为SLF4J，还需要依赖下列项：
+
+```
+<dependencies>
+  <dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-slf4j-impl</artifactId>
+    <version>2.7</version>
+  </dependency>
+</dependencies>
+```
+
+这里是一个`log4j2.xml`在控制台记录日志的例子：
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Logger name="org.springframework.beans.factory" level="DEBUG"/>
+    <Root level="error">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>
+```
+
+**原生JCL运行容器**
+
+许多人在一个容器中运行他们的Spring应用程序，该容器本身提供了JCL的实现。IBM Websphere应用服务器（WAS）就是一个例子。这常常导致问题，不幸的是没有一个一劳永逸解决方案;在大多数情况下，只是从你的应用程序中排除`commons-logging`是不够的。
+
+要明确这一点：报告的问题通常不是JCL本身，或者`commons-logging`：而是他们要从`commons-logging`绑定到另一个框架（通常Log4J）。这可能会失败，因为`commons-logging`改变了在一些容器中发现的旧版本（1.0）和大多数人现在使用的现代版本（1.1）之间执行运行时发现的方式。 Spring不使用JCL API的任何不常见的模块，所以没有什么问题出现，但一旦Spring或你的应用程序试图做任何日志记录，你可以发现绑定的Log4J不工作了。
+
+在这种情况下，使用WAS，最容易做的事情是反转类加载器层次结构（IBM称之为"parent last"），以便应用程序控制JCL依赖关系，而不是容器。该选项并不总是开放的，但在公共领域有许多其他建议替代方法，你的里程可能会根据容器的确切版本和功能集而有所不同。
