@@ -407,4 +407,4 @@ SLF4J用户中更常见的选择是使用较少的步骤和生成较少的依赖
 
 **使用Log4J**
 
-![Log4Jj](/assets/note.png) | 
+![Log4Jj](/assets/note.png) | Log4j 1.x is EOL and Log4j 2.3 is the last Java 6 compatible release
