@@ -11,6 +11,6 @@
 
 ## 3.1 开始体验
 <br/>
-新的Spring.io网站提供一系列的“入门”指南帮助你学习Spring。你可以阅读更多的关于指南的在Chapter 1, Getting Started With Spring部分在这个文档。新的万展也提供全面的概述，关于很多发布在Spring下的额外项目。
+新的[Spring.io](https://spring.io/)网站提供一系列的“[入门](https://spring.io/guides)”指南帮助你学习Spring。你可以阅读更多的关于指南的在[Chapter 1, Getting Started With Spring](README.md#2.2.1-核心容器)部分在这个文档。新的万展也提供全面的概述，关于很多发布在Spring下的额外项目。
 
 如果你是一个Maven用户，你也许会对有用的"bill of materials"POM文件感兴趣，发布在每个Spring框架发行版。
