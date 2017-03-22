@@ -25,4 +25,13 @@
 请注意，所有可选的第三方依赖都已经升级到了最低2010/2011(例如Spring4通常只支持2010年的最新或者现在的最新发布版本):尤其是 Hibernate 3.6+、EhCache 2.1+、Quartz 1.8+、Groovy 1.8+、和Joda-Time 2.0+。但是有一个例外，Spring4依赖最近的Hibernate Validator 4.3+，现在对Jackson的支持集中在2.0+版本 (Spring3.2支持的Jackson 1.8/1.9，现在已经过时）。
 <br/>
 
-## 
+## 3.3 Java 8 (以及6和7)
+<br/>
+Spring4支持Java8的一些特性。你可以在Spring的回调接口中使用lambda表达式和方法引用。支持`java.time`([JSR-310](https://jcp.org/en/jsr/detail?id=310))的值类型和一些改进过的注解，例如`@Repeatable`。你还可以使用Java8的参数名称发现机制（基于`-parameters`编译器标志）。
+
+Spring仍然兼容老版本的Java和JDK：Java SE 6（具体来说，支持JDK6 update 18）以上版本，我们建议新的基于Spring4的项目使用Java7或Java8。
+<br/>
+
+## 3.4 Java EE 6 and 7
+<br/>
+Java EE 6 或以上版本是Spring4的底线,与JPA2.0和Servlet3.0规范有着特殊的意义。为了保持与Google App Engine和旧的应用程序服务器兼容,Spring4可以部署在Servlet2.5运行环境。但是我们强烈的建议您在Spring测试和模拟测试的开发环境中使用Servlet3.0+。
