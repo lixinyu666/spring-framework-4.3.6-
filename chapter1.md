@@ -14,3 +14,15 @@
 新的[Spring.io](https://spring.io/)网站提供一系列的“[入门](https://spring.io/guides)”指南帮助你学习Spring。你可以阅读更多的关于指南的在[Chapter 1, Getting Started With Spring](README.md#2.2.1-核心容器)部分在这个文档。新的万展也提供全面的概述，关于很多发布在Spring下的额外项目。
 
 如果你是一个Maven用户，你也许会对有用的[bill of materials](README.md#2.2.1-核心容器)POM文件感兴趣，发布在每个Spring框架发行版。
+<br/>
+
+## 3.2 移除过时的包和方法
+<br/>
+所有过时的包和许多过时的类和方法已经从Spring4中移除。如果你从之前的发布版升级Spring，你需要保证已经修复了所有使用过时的API方法。
+
+查看完整的变化： [API差异报告](http://docs.spring.io/spring-framework/docs/3.2.4.RELEASE_to_4.0.0.RELEASE/)。
+
+请注意，所有可选的第三方依赖都已经升级到了最低2010/2011(例如Spring4通常只支持2010年的最新或者现在的最新发布版本):尤其是 Hibernate 3.6+、EhCache 2.1+、Quartz 1.8+、Groovy 1.8+、Joda-Time 2.0+。但是有一个例外，Spring4依赖最近的Hibernate Validator 4.3+，现在对Jackson的支持集中在2.0+版本 (Spring3.2支持的Jackson 1.8/1.9，现在已经过时）。
+<br/>
+
+## 
