@@ -74,4 +74,4 @@ reader.beans {
 ## 核心容器改进
 <br/>
 有几种对核心容器的常规改进：
-*    Spring现在注入Bean的时候把 泛型类型 当成一种形式的 限定符。例如：如果你使用Spring Data `Repository`你可以方便的插入特定的实现：`@Autowired Repository<Customer> customerRepository`。
+*    Spring现在注入Bean的时候把[泛型类型当成一种形式的限定符](README.md#2.2.1-核心容器)。例如：如果你使用Spring Data `Repository`你可以方便的插入特定的实现：`@Autowired Repository<Customer> customerRepository`。
