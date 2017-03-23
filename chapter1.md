@@ -111,3 +111,10 @@ reader.beans {
 * 现在可以以编程方式解决Bean定义配置文件的激活。只需要实现一个自定义的`ActiveProfilesResolver`，并且通过`@ActiveProfiles`的`resolver`属性注册。
 * 新的`SocketUtils`类被引入到了`spring-core`模块。这个类可以使你能够扫描本地主机的空闲的TCP和UDP服务端口。这个功能不是专门用在测试的，但是可以证明在你使用Socket写集成测试的时候非常有用。例如测试内存中启动的SMTP服务器，FTP服务器，Servlet容器等。
 * 从Spring 4.0开始,`org.springframework.mock.web`包中的一套mock是基于Servlet 3.0 API。此外，一些Servlet API mocks（例如：`MockHttpServletRequest`、`MockServletContext`等等）已经有一些小的改进更新，提高了可配置性。
+<br/>
+
+## 4 Spring 4.1增强和新功能
+<br/>
+
+## 4.1 JMS改进
+<br/>
