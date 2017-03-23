@@ -35,3 +35,5 @@ Spring仍然兼容老版本的Java和JDK：Java SE 6（具体来说，支持JDK6
 ## 3.4 Java EE 6 and 7
 <br/>
 Java EE 6 或以上版本是Spring4的底线,与JPA2.0和Servlet3.0规范有着特殊的意义。为了保持与Google App Engine和旧的应用程序服务器兼容,Spring4可以部署在Servlet2.5运行环境。但是我们强烈的建议您在Spring测试和模拟测试的开发环境中使用Servlet3.0+。
+
+![java](/assets/note1.png) |
