@@ -92,4 +92,13 @@ reader.beans {
 
 * 你可以在Spring MVC应用中使用新的`@RestController`[注解](README.md#2.2.1-核心容器)，不在需要给`@RequestMapping`的方法添加`@ResponseBody`注解。
 * `AsyncRestTemplate`类已被添加进来，当开发REST客户端时，[允许非阻塞异步支持](README.md#2.2.1-核心容器)。
-* 当开发Spring MVC应用时，Spring现在提供了全面的时区支持 。
+* 当开发Spring MVC应用时，Spring现在提供了[全面的时区支持](README.md#2.2.1-核心容器)。
+<br/>
+
+## 3.8 WebSocket、SockJS和STOMP消息
+<br/>
+一个新的`spring-websocket`模块提供了全面的基于WebSocket和在Web应用的客户端和服务器之间双向通信的支持。它和Java WebSocket API [JSR-356](https://jcp.org/en/jsr/detail?id=356)兼容，此外还提供了当浏览器不支持WebSocket协议时的基于SockJS的备用选项。
+
+一个新的`spring-messaging`模块添加了支持STOMP作为WebSocket子协议用于在应用中使用注解编程模型路由和处理从WebSocket客户端发送的STOMP消息。由于`@Controller`现在可以同时包含`@RequestMapping`和`@MessageMapping`方法用于处理HTTP请求和来自WebSocket连接客户端发送的消息。新的`spring-messaging`模块还包含了来自以前Spring集成项目的关键抽象，例如`Message`、`MessageChannel`、`MessageHandler`和其他作为基于消息传递的应用程序的基础。
+
+欲知详情以及较全面的介绍，请参见Chapter 20, WebSocket 支持一节。
