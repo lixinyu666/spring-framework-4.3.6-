@@ -43,7 +43,7 @@ Java EE 6 或以上版本是Spring4的底线,与JPA2.0和Servlet3.0规范有着�
 注意，Hibernate 4.3是JPA 2.1的提供者，因此它只支持Spring4。同样适用用于作为Bean Validation 1.1提供者的Hibernate Validator 5.0。这两个都不支持Spring3.2。
 <br/>
 
-## Groovy DSL定义Bean
+## 3.5 Groovy DSL定义Bean
 <br/>
 Spring4.0支持使用Groovy DSL来进行外部的bean定义配置。这在概念上类似于使用XML的bean定义，但是支持更简洁的语法。使用Groovy还允许您轻松地将bean定义直接嵌入到引导代码中。例如：
 
@@ -71,7 +71,15 @@ reader.beans {
 有关更多信息，请参阅`GroovyBeanDefinitionReader` [javadocs](http://docs.spring.io/spring-framework/docs/4.3.7.RELEASE/javadoc-api/org/springframework/beans/factory/groovy/GroovyBeanDefinitionReader.html)。
 <br/>
 
-## 核心容器改进
+## 3.6 核心容器改进
 <br/>
 有几种对核心容器的常规改进：
-*    Spring现在注入Bean的时候把[泛型类型当成一种形式的限定符](README.md#2.2.1-核心容器)。例如：如果你使用Spring Data `Repository`你可以方便的插入特定的实现：`@Autowired Repository<Customer> customerRepository`。
+* Spring现在注入Bean的时候把[泛型类型当成一种形式的限定符](README.md#2.2.1-核心容器)。例如：如果你使用Spring Data `Repository`你可以方便的插入特定的实现：`@Autowired Repository<Customer> customerRepository`。
+* 如果你使用Spring的元注解支持，你现在可以开发自定义注解来公开源注解的特定属性。
+* 当自动装配到lists和arrays时，Beans现在可以被 排序 了。支持@Order注解和Ordered接口两种方式。
+* @Lazy注解现在可以用在注入点以及@Bean定义上。
+* 引入@Description注解,开发人员可以使用基于Java方式的配置。
+* 根据条件筛选Beans的广义模型通过@Conditional注解加入。这和@Profile支持的类似，但是允许以编程式开发用户定义的策略。
+* 基于CGLIB的代理类不在需要默认的构造方法。这个支持是由 objenesis库提供。这个库重新打包到Spring框架中，作为Spring框架的一部分发布。通过这个策略，针对代理实例被调用没有构造可言了。
+* 框架现在支持管理时区。例如LocaleContext。
+<br/>
