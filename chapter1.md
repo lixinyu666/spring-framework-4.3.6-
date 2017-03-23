@@ -79,7 +79,17 @@ reader.beans {
 * 当[自动装配到lists和arrays](README.md#2.2.1-核心容器)时，Beans现在可以被排序了。支持`@Order`注解和`Ordered`接口两种方式。
 * `@Lazy`注解现在可以用在注入点以及`@Bean`定义上。
 * 引入`@Description`[注解](README.md#2.2.1-核心容器),开发人员可以使用基于Java方式的配置。
-* 根据条件筛选Beans的广义模型通过@Conditional注解加入。这和@Profile支持的类似，但是允许以编程式开发用户定义的策略。
-* 基于CGLIB的代理类不在需要默认的构造方法。这个支持是由 objenesis库提供。这个库重新打包到Spring框架中，作为Spring框架的一部分发布。通过这个策略，针对代理实例被调用没有构造可言了。
-* 框架现在支持管理时区。例如LocaleContext。
+* [根据条件筛选Beans](README.md#2.2.1-核心容器)的广义模型通过`@Conditional`注解加入。这和`@Profile`支持的类似，但是允许以编程式开发用户定义的策略。
+* [基于CGLIB的代理类](README.md#2.2.1-核心容器)不在需要默认的构造方法。这个支持是由[objenesis](https://github.com/easymock/objenesis)库提供。这个库重新打包到Spring框架中，作为Spring框架的一部分发布。通过这个策略，针对代理实例被调用没有构造可言了。
+* 框架现在支持管理时区。例如`LocaleContext`。
 <br/>
+
+## 3.7 常规Web改进
+<br/>
+现在仍然可以部署到Servlet 2.5服务器，但是Spring4.0现在主要集中在Servlet 3.0+环境。如果你使用[Spring MVC测试框架](README.md#2.2.1-核心容器)，你需要将Servlet 3.0兼容的JAR包放到 测试的classpath下。
+
+除了稍后会提到的WebSocket支持外，下面的常规改进已经加入到Spring的Web模块：
+
+* 你可以在Spring MVC应用中使用新的`@RestController`[注解](README.md#2.2.1-核心容器)，不在需要给`@RequestMapping`的方法添加`@ResponseBody`注解。
+* `AsyncRestTemplate`类已被添加进来，当开发REST客户端时，[允许非阻塞异步支持](README.md#2.2.1-核心容器)。
+* 当开发Spring MVC应用时，Spring现在提供了全面的时区支持 。
