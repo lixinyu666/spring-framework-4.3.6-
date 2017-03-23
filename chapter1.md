@@ -75,10 +75,10 @@ reader.beans {
 <br/>
 有几种对核心容器的常规改进：
 * Spring现在注入Bean的时候把[泛型类型当成一种形式的限定符](README.md#2.2.1-核心容器)。例如：如果你使用Spring Data `Repository`你可以方便的插入特定的实现：`@Autowired Repository<Customer> customerRepository`。
-* 如果你使用Spring的元注解支持，你现在可以开发自定义注解来公开源注解的特定属性。
-* 当自动装配到lists和arrays时，Beans现在可以被 排序 了。支持@Order注解和Ordered接口两种方式。
-* @Lazy注解现在可以用在注入点以及@Bean定义上。
-* 引入@Description注解,开发人员可以使用基于Java方式的配置。
+* 如果你使用Spring的元注解支持，你现在可以开发自定义注解来[公开源注解的特定属性](README.md#2.2.1-核心容器)。
+* 当[自动装配到lists和arrays](README.md#2.2.1-核心容器)时，Beans现在可以被排序了。支持`@Order`注解和`Ordered`接口两种方式。
+* `@Lazy`注解现在可以用在注入点以及`@Bean`定义上。
+* 引入`@Description`[注解](README.md#2.2.1-核心容器),开发人员可以使用基于Java方式的配置。
 * 根据条件筛选Beans的广义模型通过@Conditional注解加入。这和@Profile支持的类似，但是允许以编程式开发用户定义的策略。
 * 基于CGLIB的代理类不在需要默认的构造方法。这个支持是由 objenesis库提供。这个库重新打包到Spring框架中，作为Spring框架的一部分发布。通过这个策略，针对代理实例被调用没有构造可言了。
 * 框架现在支持管理时区。例如LocaleContext。
