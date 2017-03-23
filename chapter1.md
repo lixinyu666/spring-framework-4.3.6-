@@ -118,3 +118,33 @@ reader.beans {
 
 ## 4.1 JMS改进
 <br/>
+Spring 4.1引入了一个更简单的基础架构，使用`@JmsListener`注解bean方法来[注册JMS监听端点](README.md#2.2.1-核心容器)。XML命名空间已经通过增强来支持这种新的方式（`jms:annotation-driven`），它也可以完全通过Java配置(`@EnableJms`, `JmsListenerContainerFactory`)来配置架构。也可以使用 `JmsListenerConfigurer`注解来注册监听端点。
+
+Spring 4.1还调整了JMS的支持，使得你可以从`spring-messaging`在Spring4.0引入的抽象获益，即：
+* 消息监听端点可以有更为灵活的签名，并且可以从标准的消息注解获益，例如`@Payload`、`@Header`、`@Headers`和`@SendTo`注解。另外，也可以使用一个标准的消息，以代替`javax.jms.Message`作为方法参数。
+* 一个新的可用`JmsMessageOperations`接口和允许操作使用`Message`抽象的`JmsTemplate`。
+
+最后，Spring 4.1提供了其他各种各样的改进：
+
+* JmsTemplate中的同步请求-答复操作支持
+* 监听器的优先权可以指定每个`<jms:listener/>`元素
+* 消息侦听器容器恢复选项可以通过使用`BackOff`实现进行配置
+* JMS 2.0消费者支持共享
+<br/>
+
+## 4.2 Caching（缓存）改进
+<br/>
+Spring 4.1 支持[JCache (JSR-107)注解](README.md#2.2.1-核心容器)使用Spring的现有缓存配置和基础结构的抽象；使用标准注解不需要任何更改。
+
+Spring 4.1也大大提高了自己的缓存抽象：
+
+* 缓存可以在运行时使用`CacheResolver`解决。因此使用`value`参数定义的缓存名称不在是强制性的。
+* 更多的操作级自定义项：缓存解析器，缓存管理器，键值生成器
+* 一个新的`@CacheConfig`[类级别注解](README.md#2.2.1-核心容器)允许在类级别上共享常用配置，不需要启用任何缓存操作。
+* 使用`CacheErrorHandler`更好的处理缓存方法的异常。
+
+Spring 4.1为了在`CacheInterface`添加一个新的`putIfAbsent`方法也做了重大的更改。
+<br/>
+
+## 4.3 Web改进
+<br/>
