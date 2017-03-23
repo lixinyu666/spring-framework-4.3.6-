@@ -101,4 +101,13 @@ reader.beans {
 
 一个新的`spring-messaging`模块添加了支持STOMP作为WebSocket子协议用于在应用中使用注解编程模型路由和处理从WebSocket客户端发送的STOMP消息。由于`@Controller`现在可以同时包含`@RequestMapping`和`@MessageMapping`方法用于处理HTTP请求和来自WebSocket连接客户端发送的消息。新的`spring-messaging`模块还包含了来自以前Spring集成项目的关键抽象，例如`Message`、`MessageChannel`、`MessageHandler`和其他作为基于消息传递的应用程序的基础。
 
-欲知详情以及较全面的介绍，请参见Chapter 20, WebSocket 支持一节。
+欲知详情以及较全面的介绍，请参见[Chapter 20, WebSocket](README.md#2.2.1-核心容器)支持一节。
+<br/>
+
+## 3.9 测试改进
+<br/>
+除了精简`spring-test`模块中过时的代码外，Spring4还引入了几个用于单元测试和集成测试的新功能。
+* 几乎spring-test模块中所有的注解（例如：@ContextConfiguration、@WebAppConfiguration、@ContextHierarchy、@ActiveProfiles等等)现在可以用作元注解来创建自定义的composed annotations并且可以减少测试套件的配置。
+* 现在可以以编程方式解决Bean定义配置文件的激活。只需要实现一个自定义的ActiveProfilesResolver，并且通过@ActiveProfiles的resolver属性注册。
+* 新的SocketUtils类被引入到了spring-core模块。这个类可以使你能够扫描本地主机的空闲的TCP和UDP服务端口。这个功能不是专门用在测试的，但是可以证明在你使用Socket写集成测试的时候非常有用。例如测试内存中启动的SMTP服务器，FTP服务器，Servlet容器等。
+* 从Spring 4.0开始,org.springframework.mock.web包中的一套mock是基于Servlet 3.0 API。此外，一些Servlet API mocks（例如：MockHttpServletRequest、MockServletContext等等）已经有一些小的改进更新，提高了可配置性。
